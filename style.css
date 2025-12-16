@@ -1,0 +1,134 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f8f4;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #2e7d32;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 70vh;
+  background-image: url("images/ecoCornersBg.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hero text directly on image */
+.hero h1 {
+  font-size: 80px;
+  color: rgb(1, 139, 1);
+  letter-spacing: 2px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 40px;
+  color: rgb(111, 177, 12);
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Button */
+.btn {
+  background-color: #012703;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #256628;
+}
+
+/* FEATURES SECTION */
+.features {
+  padding: 60px 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #2e7d32;
+}
+
+.feature-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature {
+  width: 300px;
+  margin: 15px;
+  text-align: left;
+}
+
+.feature img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #333;
+}
+
+.feature p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+}
