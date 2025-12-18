@@ -39,7 +39,7 @@ nav a:hover {
 
 /* HERO SECTION */
 .hero {
-  height: 70vh;
+  height: 100vh;
   background-image: url("images/ecoCornersBg.jpeg");
   background-size: cover;
   background-position: center;
