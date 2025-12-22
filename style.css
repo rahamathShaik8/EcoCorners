@@ -1,13 +1,14 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f8f4;
+  background-color: #2e7d3257;
 }
 
 /* HEADER */
@@ -35,6 +36,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: greenyellow;
 }
 
 /* HERO SECTION */
@@ -51,7 +53,6 @@ nav a:hover {
   text-align: center;
 }
 
-/* Hero text directly on image */
 .hero h1 {
   font-size: 80px;
   color: rgb(1, 139, 1);
@@ -59,15 +60,21 @@ nav a:hover {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 
-.hero p {
-  margin: 15px 0;
+.main-text {
   font-size: 40px;
   color: rgb(111, 177, 12);
-  max-width: 600px;
+  margin: 15px 0;
+  max-width: 700px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Button */
+.sub-text {
+  font-size: 20px;
+  color: #e0f2e0;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
 .btn {
   background-color: #012703;
   color: white;
@@ -81,10 +88,31 @@ nav a:hover {
   background-color: #256628;
 }
 
+/* TRUST SECTION */
+.trust {
+  padding: 60px 40px;
+  background-color: #eef5ef;
+  text-align: center;
+}
+
+.trust h2 {
+  font-size: 32px;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.trust p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 17px;
+  color: #444;
+  line-height: 1.6;
+}
+
 /* FEATURES SECTION */
 .features {
   padding: 60px 40px;
-  background-color: white;
+  background-color: beige;
   text-align: center;
 }
 
@@ -104,6 +132,14 @@ nav a:hover {
   width: 300px;
   margin: 15px;
   text-align: left;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
 }
 
 .feature img {
@@ -125,10 +161,207 @@ nav a:hover {
   color: #555;
 }
 
+/* CALL TO ACTION */
+.cta {
+  padding: 70px 40px;
+  background-color: #eef5ef;
+  text-align: center;
+}
+
+.cta h2 {
+  color: green;
+  margin-bottom: 20px;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 15px;
-  background-color: #e0e0e0;
+  padding: 18px;
+  background-color: #1f4f23;
   font-size: 14px;
+  color: #d9ead9;
+}
+
+/* ================= ABOUT HERO ================= */
+.about-hero {
+  padding: 90px 40px;
+  background-color: #e8f3ea;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  color: #444;
+}
+
+/* ================= ABOUT SECTIONS ================= */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 40px;
+  background-color: white;
+  gap: 40px;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+  background-color: #f4f8f4;
+}
+
+/* ================= TEXT ================= */
+.about-text {
+  width: 50%;
+}
+
+.about-text h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ================= IMAGE ================= */
+.about-image {
+  width: 45%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-image figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+/* PLANTS HERO */
+.plants-hero {
+  padding: 80px 40px;
+  background-color: #e8f3ea;
+  text-align: center;
+}
+
+.plants-hero h1 {
+  font-size: 48px;
+  color: #2e7d32;
+}
+
+.plants-hero p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* CATEGORY BUTTONS */
+.plant-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px 0;
+}
+
+.category-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #2e7d32;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.category-btn.active {
+  background-color: greenyellow;
+  color: #2e7d32;
+}
+
+/* PLANT CARDS */
+.plant-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.plant-card {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.plant-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.plant-card h3 {
+  margin-top: 10px;
+  color: #2e7d32;
+}
+
+.plant-card p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.view-details-btn,
+.close-details-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #012703;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.view-details-btn:hover,
+.close-details-btn:hover {
+  background-color: #256628;
+}
+
+/* PLANT DETAILS PANEL */
+.plant-details {
+  display: none;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.plant-details h4 {
+  margin-top: 10px;
+  color: #2e7d32;
+}
+
+.plant-details p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.plant-details audio,
+.plant-details video,
+.plant-details iframe {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 6px;
 }

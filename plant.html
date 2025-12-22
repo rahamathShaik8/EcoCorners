@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Plants | ecoCorners</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <img src="images/EcoCornersLogo.jpeg" alt="ecoCorners logo" />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plant.html">Plants</a>
+        <a href="#">Categories</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="plants-hero">
+      <h1>Explore Plants</h1>
+      <p>Choose a category and discover plants with full details</p>
+    </section>
+
+    <!-- CATEGORY FILTER -->
+    <section class="plant-categories">
+      <button class="category-btn active" data-category="indoor">
+        Indoor Plants
+      </button>
+      <button class="category-btn" data-category="outdoor">
+        Outdoor Plants
+      </button>
+      <button class="category-btn" data-category="medicinal">
+        Medicinal Plants
+      </button>
+      <button class="category-btn" data-category="airpurify">
+        Air Purifying
+      </button>
+      <button class="category-btn" data-category="flowering">Flowering</button>
+    </section>
+
+    <!-- PLANT CARDS -->
+    <section class="plant-cards">
+      <!-- Example Plant Card -->
+      <div class="plant-card indoor">
+        <img src="images/snake.jpg" alt="Snake Plant" />
+        <h3>Snake Plant</h3>
+        <p>Easy-to-care indoor plant that purifies air.</p>
+        <button class="view-details-btn">View Details</button>
+
+        <div class="plant-details">
+          <h4>Uses & Benefits</h4>
+          <p>Reduces toxins, improves oxygen, enhances aesthetics.</p>
+          <h4>Placement</h4>
+          <p>Bedroom, Living Room</p>
+          <h4>Care Instructions</h4>
+          <p>Water once every 7–10 days. Thrives in low light.</p>
+          <h4>Price</h4>
+          <p>₹299 – ₹599</p>
+
+          <h4>Audio Tips</h4>
+          <audio controls>
+            <source src="media/snake-plant-audio.mp3" type="audio/mpeg" />
+            Your browser does not support audio.
+          </audio>
+
+          <h4>Video Tutorial</h4>
+          <video controls width="100%">
+            <source src="media/snake-plant-video.mp4" type="video/mp4" />
+            Your browser does not support video.
+          </video>
+
+          <h4>Reference Video</h4>
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/7rY2rD1L9m8"
+            allowfullscreen
+          ></iframe>
+
+          <button class="close-details-btn">Close</button>
+        </div>
+      </div>
+
+      <!-- Duplicate plant cards here for other plants -->
+      <!-- Change class to match category: outdoor, medicinal, airpurify, flowering -->
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 ecoCorners | Growing greener homes</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+      // CATEGORY FILTER
+      const categoryBtns = document.querySelectorAll(".category-btn");
+      const plantCards = document.querySelectorAll(".plant-card");
+
+      categoryBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          categoryBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const cat = btn.getAttribute("data-category");
+          plantCards.forEach((card) => {
+            if (card.classList.contains(cat)) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // DETAILS TOGGLE
+      const viewBtns = document.querySelectorAll(".view-details-btn");
+      const closeBtns = document.querySelectorAll(".close-details-btn");
+
+      viewBtns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          plantCards[i].querySelector(".plant-details").style.display = "block";
+        });
+      });
+
+      closeBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.parentElement.style.display = "none";
+        });
+      });
+
+      // Show first category by default
+      categoryBtns[0].click();
+    </script>
+  </body>
+</html>
