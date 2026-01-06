@@ -25,4 +25,9 @@ let nullVar = null;
 console.log(typeof nullVar); //object (null)
 let undefVar;
 console.log(typeof undefVar); //undefined
-alert("Welcome to EcoCorners!");
+//alert("Welcome to EcoCorners!");
+// functions
+function greet(userName) {
+  alert("Hello, " + userName + "! Welcome to EcoCorners.");
+}
+greet(prompt("enter your name:"));

@@ -2,201 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Plants | ecoCorners</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Plant Store |EcoCorners</title>
+    <style>
+      body {
+        text-align: center;
+        color: white;
+      }
+    </style>
   </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <div class="logo">
-        <img src="images/EcoCornersLogo.jpeg" alt="ecoCorners logo" />
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="plant.html">Plants</a>
-        <a href="#">Categories</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
+  <body
+    style="
+      background-image: url('images/store2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    "
+  >
+    >
+    <h1>Plant Store</h1>
 
-    <!-- HERO -->
-    <section class="plants-hero">
-      <h1>Explore Plants</h1>
-      <p>Choose a category and discover plants with full details</p>
-    </section>
+    <!-- Plant List -->
+    <h2>Available Plants</h2>
 
-    <!-- CATEGORY FILTER -->
-    <section class="plant-categories">
-      <button class="category-btn active" data-category="indoor">
-        Indoor Plants
-      </button>
-      <button class="category-btn" data-category="outdoor">
-        Outdoor Plants
-      </button>
-      <button class="category-btn" data-category="medicinal">
-        Medicinal Plants
-      </button>
-      <button class="category-btn" data-category="airpurify">
-        Air Purifying
-      </button>
-      <button class="category-btn" data-category="flowering">Flowering</button>
-    </section>
+    <div>
+      <p><strong>Aloe Vera</strong> | Indoor | ₹250</p>
+      <button onclick="showPlant(0)">Show Plant</button>
+    </div>
 
-    <!-- PLANT CARDS -->
-    <section class="plant-cards">
-      <!-- Example Plant Card -->
-      <div class="plant-card indoor">
-        <img src="images/snake.jpg" alt="Snake Plant" />
-        <h3>Snake Plant</h3>
-        <p>Easy-to-care indoor plant that purifies air.</p>
-        <button class="view-details-btn">View Details</button>
+    <div>
+      <p><strong>Rose</strong> | Outdoor | ₹150</p>
+      <button onclick="showPlant(1)">Show Plant</button>
+    </div>
 
-        <div class="plant-details">
-          <h4>Uses & Benefits</h4>
-          <p>Reduces toxins, improves oxygen, enhances aesthetics.</p>
-          <h4>Placement</h4>
-          <p>Bedroom, Living Room</p>
-          <h4>Care Instructions</h4>
-          <p>Water once every 7–10 days. Thrives in low light.</p>
-          <h4>Price</h4>
-          <p>₹299 – ₹599</p>
+    <div>
+      <p><strong>Money Plant</strong> | Indoor | ₹200</p>
+      <button onclick="showPlant(2)">Show Plant</button>
+    </div>
 
-          <h4>Audio Tips</h4>
-          <audio controls>
-            <source src="media/snake-plant-audio.mp3" type="audio/mpeg" />
-            Your browser does not support audio.
-          </audio>
+    <div>
+      <p><strong>Tulsi</strong> | Medicinal | ₹100</p>
+      <button onclick="showPlant(3)">Show Plant</button>
+    </div>
 
-          <h4>Video Tutorial</h4>
-          <video controls width="100%">
-            <source src="media/snake-plant-video.mp4" type="video/mp4" />
-            Your browser does not support video.
-          </video>
+    <hr />
 
-          <h4>Reference Video</h4>
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/7rY2rD1L9m8"
-            allowfullscreen
-          ></iframe>
+    <!-- Selected Plant Details -->
+    <h2>Plant Details</h2>
+    <div id="plantDetails"></div>
 
-          <button class="close-details-btn">Close</button>
-        </div>
-      </div>
+    <hr />
 
-      <!-- Duplicate plant cards here for other plants -->
-      <!-- Change class to match category: outdoor, medicinal, airpurify, flowering -->
-    </section>
-    <table border="1" style="margin: auto; width: 90%; text-align: center">
-      <caption>
-        EcoCorners Plant Care Info
-      </caption>
-      <thead>
-        <tr>
-          <th>Plant Name</th>
-          <th>Light Requirements</th>
-          <th>Watering Frequency</th>
-          <th>Ideal Temperature</th>
-          <th>Humidity Level</th>
-          <th>Soil Type</th>
-          <th>Fertilization Schedule</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Snake Plant</td>
-          <td>Low to bright indirect light</td>
-          <td>Every 2-6 weeks</td>
-          <td>60-85°F (15-29°C)</td>
-          <td>Low to moderate</td>
-          <td>Well-draining potting mix</td>
-          <td>Every 2-3 months during growing season</td>
-        </tr>
-        <tr>
-          <td>Spider Plant</td>
-          <td>Bright, indirect light</td>
-          <td>Once a week</td>
-          <td>55-80°F (13-27°C)</td>
-          <td>Moderate to high</td>
-          <td>All-purpose potting soil</td>
-          <td>Monthly during growing season</td>
-        </tr>
-        <tr>
-          <td>Peace Lily</td>
-          <td>Low to medium light</td>
-          <td>Once a week</td>
-          <td>65-80°F (18-27°C)</td>
-          <td>High humidity</td>
-          <td>Well-draining, rich potting soil</td>
-          <td>Every 6 weeks during growing season</td>
-        </tr>
-        <tr>
-          <td>Aloe Vera</td>
-          <td>Bright, indirect light</td>
-          <td>Every 3 weeks</td>
-          <td>55-80°F (13-27°C)</td>
-          <td>Low to moderate</td>
-          <td>Sandy, well-draining soil</td>
-          <td>Once in spring and once in summer</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="7">
-            Note: Adjust care based on your specific environment and plant
-            needs.
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2025 ecoCorners | Growing greener homes</p>
-    </footer>
+    <!-- Cart Section -->
+    <h2>Cart</h2>
+    <div id="cartDetails">
+      <p>Cart is empty</p>
+    </div>
 
-    <!-- SCRIPT -->
-    <script>
-      // CATEGORY FILTER
-      const categoryBtns = document.querySelectorAll(".category-btn");
-      const plantCards = document.querySelectorAll(".plant-card");
-
-      categoryBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          categoryBtns.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-
-          const cat = btn.getAttribute("data-category");
-          plantCards.forEach((card) => {
-            if (card.classList.contains(cat)) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
-
-      // DETAILS TOGGLE
-      const viewBtns = document.querySelectorAll(".view-details-btn");
-      const closeBtns = document.querySelectorAll(".close-details-btn");
-
-      viewBtns.forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-          plantCards[i].querySelector(".plant-details").style.display = "block";
-        });
-      });
-
-      closeBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          btn.parentElement.style.display = "none";
-        });
-      });
-
-      // Show first category by default
-      categoryBtns[0].click();
-    </script>
+    <script src="decor.js"></script>
   </body>
 </html>
