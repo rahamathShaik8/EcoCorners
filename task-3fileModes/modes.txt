@@ -1,0 +1,2 @@
+Written using w+ mode
+Appended using a+ mode
