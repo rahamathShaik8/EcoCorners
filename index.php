@@ -1,3 +1,10 @@
+<?php
+session_start();
+?>
+<?php if(isset($_SESSION['username'])): ?>
+<h3>Welcome <?php echo $_SESSION['username']; ?></h3>
+<?php endif; ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,6 +45,10 @@
         Make informed plant choices for healthier and sustainable living spaces.
       </p>
       <a href="#" class="btn">Explore Plants</a>
+      <hr />
+      <a href="google_oauth.php">
+        <button>Login with Google</button>
+      </a>
     </section>
 
     <!-- TRUST SECTION -->
