@@ -62,3 +62,11 @@ Removes a configuration setting from Git.
 
 Example:
 git config --unset user.name
+# 2. Repository Setup Commands
+
+git init -initialize empty repository 
+git clone - clone a repo
+git clone --branch
+git clone --depth
+
+![alt text](image-1.png)
