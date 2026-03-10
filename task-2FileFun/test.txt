@@ -1,0 +1,3 @@
+EcoCorners PHP Lab
+File Handling Functions
+Updated using file_put_contents()
